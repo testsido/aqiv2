@@ -24,7 +24,18 @@
         color: transparent;
         }
 </style>
-<body>
+  <body>
+<img src="{{url_for('static',filename='images/3.jpg')}}" alt="myimage" style="width: 100%;
+height:100%;overflow: hidden;-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;text-align:center;
+	letter-spacing:1.2px;
+
+  background-position: center;">
+  <div class="login">
+ <a href="{{url_for('index')}}" </a> <h1 style="font-family: Luna;font-size: 20px;margin-top: 0%;">Air Quality Index [ AQI ] Prediction</h1>
+
  <div class="login">
  <h1 style="font-family: Luna;font-size: 20px;margin-top: 0%;">Air Quality Index [ AQI ] Prediction</h1>
 
