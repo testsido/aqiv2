@@ -112,7 +112,7 @@ body {
 
   background-size: cover;
   background-position: center;
-  background-image:linear-gradient(rgba(0, 0, 0, 0.863),rgba(58, 37, 18, 0.63),rgba(24, 21, 36, 0.61),rgba(0, 0, 0, 0.959)), url(./3.jpg);
+  background-image:linear-gradient(rgba(0, 0, 0, 0.863),rgba(58, 37, 18, 0.63),rgba(24, 21, 36, 0.61),rgba(0, 0, 0, 0.959)), url('./3.jpg');
   
 /* background: #141E30;
 background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
