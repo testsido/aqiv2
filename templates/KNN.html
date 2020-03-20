@@ -1,44 +1,75 @@
 <!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-<!-- <link rel="stylesheet" href=style.css> -->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Linear Regression</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='innerstyle.css'> -->
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='buttonstyle.css'> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/innerstyle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttonstyle.css') }}">
 </head>
 <body>
- <div class="login">
-  <h1 style="font-size: 20px;margin-top: 0%;font-family:Luna ;">Air Quality Index(AQI) Prediction using K-Nearest Neighbour</h1>
+    <div class="form">
+        <h2>
+            AQI using Linear Regression
+        </h2>
+        <form action="{{ url_for('predictKNN')}}"method="post">
+        <div class="input">
+            <div class="inputBox">
+                <!-- <label> Tm </label> -->
+                <input type="text" name="T" placeholder="Temperature" required="required"">
+            </div>
+            <div class="inputBox">
+                <!-- <label> VSS </label> -->
+                <input type="text" name="TM" placeholder="Maximum Temperature" required="required">
+            </div>
+            <div class="inputBox">
+                <!-- <label> Tm </label> -->
+                <input type="text" name="Tm" placeholder="Minimum Temperature" required="required">
+            </div>
+            <div class="inputBox">
+                <!-- <label> Tm </label> -->
+                <input type="text" name="SLP" placeholder="SLP" required="required">
+            </div>
+            <div class="inputBox">
+                <!-- <label> Tm </label> -->
+                <input type="text" name="H" placeholder="Humidity" required="required">
+            </div>
+            <div class="inputBox">
+                <!-- <label> Tm </label> -->
+                <input type="text"  name="VV" placeholder="VV" required="required">
+            </div>
+            <div class="inputBox">
+                <!-- <label> Tm </label> -->
+                <input type="text"  name="V" placeholder="Wind Speed" required="required">
+            </div>
+            <div class="inputBox">
+                <!-- <label> Tm </label> -->
+                <input type="text" name="VM" placeholder="VM" required="required">
+            </div>                       
+            <button type="submit" class="btn">Predict</button>
+        </div>
+        </form>
+        <p style=" margin-top:15px;font-size:20px;font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    letter-spacing: 1px;
+    /* background: linear-gradient(to right, #ACB6E5, #74ebd5); */
+    background: #00416A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predictKNN')}}"method="post">
-      <input type="text" name="T" placeholder="Temperature" required="required" />
-      <input type="text" name="TM" placeholder="Maximum Temperature" required="required" /> 
-      <input type="text" name="Tm" placeholder="Minimum Temperature" required="required" />
-      <input type="text" name="SLP" placeholder="SLP" required="required" />
-      <input type="text" name="H" placeholder="Humidity" required="required" />
-      <input type="text" name="VV" placeholder="VV" required="required" /> 
-      <input type="text" name="V" placeholder="Wind Speed" required="required" />
-      <input type="text" name="VM" placeholder="VM" required="required" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-
-   <h1 style="font-size: 20px;"> 
-
-    {{ prediction_text }}
-   </h1>
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+        
+        "> 
+                {{ prediction_text }}
+    </p>
+        </div>
+        
+   
     
-
-  
-
- </div>
-
-
 </body>
 </html>
