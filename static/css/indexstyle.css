@@ -32,6 +32,7 @@ body
 	align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
+	font-family: Luna;
 }
 .container .title h1
 {
@@ -45,11 +46,11 @@ background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
 background: linear-gradient(to right, #6A82FB, #FC5C7D);  */
 
 /* Contrasts with the Theme */
-background: #74ebd5; 
+/* background: #74ebd5; 
 background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
-background: linear-gradient(to right, #ACB6E5, #74ebd5); 
+background: linear-gradient(to right, #ACB6E5, #74ebd5);  */
 
-
+background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 
 
 
