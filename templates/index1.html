@@ -76,18 +76,18 @@
 			<div class="contentBx">
 				<h2>KNN</h2>
 				<p> the k-nearest neighbors algorithm is a non-parametric method used for classification and regression. In both cases, the input consists of the k closest training examples in the feature space.</p>
-				<a href="{{ url_for('KNN')}}"><span>Use Me</span></a>
+				<a href=" {{ url_for('KNN')}} "><span>Use Me</span></a>
 			</div>
 		</div>
 		<div class="card">
 			<div class="imgBx">
-				<img src="{{ url_for('static', filename='svg/linearsvg.svg' ) }}" alt="linearsvg">
+				<img src="{{ url_for('static', filename='svg/randomsvg.svg' ) }}" alt="linearsvg">
 				<!-- <img src="linearsvg.svg"> -->
 			</div>
 			<div class="contentBx">
-				<h2>Linear</h2>
-				<p> Linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables).</p>
-				<a href="#"><span>Use Me</span></a>
+				<h2>Random Forest</h2>
+				<p> Random forest algorithm creates decision trees on data samples and then gets the prediction from each of them and finally selects the best solution by means of voting. It is an ensemble method.</p>
+				<a href=" {{ url_for('RForest')}} "><span>Use Me</span></a>
 			</div>
 		</div>
 		<div class="card">
