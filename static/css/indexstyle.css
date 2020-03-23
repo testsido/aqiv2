@@ -83,8 +83,11 @@ background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8f
 }
 .container .card .imgBx img
 {
-	max-width: 120px;
-	/* max-height: 120px; */
+	min-width: 120px; 
+	max-width: 120px; 
+	min-width: 120px; 
+	max-height: 120px;
+	
 }
 .container .card .contentBx
 {
