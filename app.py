@@ -62,7 +62,7 @@ def predictLinear():
 
     output = round(prediction[0], 2)
     # return json.dumps({'AQi':output});
-    return render_template('Linear.html', prediction_text='PM2.5 = {}'.format(output))
+    return render_template('Linear.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
 @app.route('/predictANN',methods=['POST'])
 def predictANN():
@@ -85,7 +85,7 @@ def predictANN():
 
     output = round(prediction[0], 2)
 
-    return render_template('ANN.html', prediction_text='PM2.5 = {}'.format(output))
+    return render_template('ANN.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
 
 @app.route('/predictKNN',methods=['POST'])
@@ -109,7 +109,7 @@ def predictKNN():
 
     output = round(prediction[0], 2)
 
-    return render_template('KNN.html', prediction_text='PM2.5 = {}'.format(output))
+    return render_template('KNN.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
 
 @app.route('/predictDecision',methods=['POST'])
@@ -133,7 +133,7 @@ def predictDecision():
 
     output = round(prediction[0], 2)
 
-    return render_template('Decision.html', prediction_text='PM2.5 = {}'.format(output))
+    return render_template('Decision.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
 @app.route('/predictRF',methods=['POST'])
 def predictRF():
@@ -156,7 +156,7 @@ def predictRF():
 
     output = round(prediction[0], 2)
 
-    return render_template('RForest.html', prediction_text='PM2.5 = {}'.format(output))
+    return render_template('RForest.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
 @app.route('/predictLasso',methods=['POST'])
 def predictLasso():
@@ -179,7 +179,7 @@ def predictLasso():
 
     output = round(prediction[0], 2)
 
-    return render_template('Lasso.html', prediction_text='PM2.5 = {}'.format(output))
+    return render_template('Lasso.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
 # @app.route('/predict_api',methods=['POST'])
 # def predict_api():
