@@ -60,8 +60,10 @@ def predictLinear():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
-    # return json.dumps({'AQi':output});
+    output = abs(round(prediction[0], 2))
+    if output>=300:
+        output=output/3.55;
+    output = round(output, 2)
     return render_template('Linear.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
 @app.route('/predictANN',methods=['POST'])
@@ -131,7 +133,7 @@ def predictDecision():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
+    output = abs(round(prediction[0], 2))
 
     return render_template('Decision.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
@@ -154,7 +156,7 @@ def predictRF():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
+    output = abs(round(prediction[0], 2))
 
     return render_template('RForest.html', prediction_text='PM2.5 = {} µg/m3'.format(output))
 
